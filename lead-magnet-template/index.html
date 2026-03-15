@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free 30-Day Content Challenge | GoLocal Group</title>
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --brand: #0b473a;
+      --brand-light: #0e5a4a;
+      --brand-dark: #083a2f;
+      --cream: #faf8f5;
+      --warm-gray: #f5f2ee;
+      --yellow: #fcd34d;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    ::selection {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 20px rgba(11,71,58,0.3); }
+      50% { box-shadow: 0 0 40px rgba(11,71,58,0.5); }
+    }
+    .fade-in { animation: fadeInUp 0.6s ease-out forwards; }
+    .fade-in-d1 { animation: fadeInUp 0.6s ease-out 0.1s forwards; opacity: 0; }
+    .fade-in-d2 { animation: fadeInUp 0.6s ease-out 0.2s forwards; opacity: 0; }
+    .fade-in-d3 { animation: fadeInUp 0.6s ease-out 0.3s forwards; opacity: 0; }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      background: var(--brand);
+      overflow: hidden;
+    }
+    .hero-bg-circle-1 {
+      position: absolute;
+      top: -50%;
+      right: -25%;
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+    .hero-bg-circle-2 {
+      position: absolute;
+      bottom: -33%;
+      left: -25%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .hero-inner {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 24px 96px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      color: rgba(255,255,255,0.9);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 60px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 24px;
+    }
+    .hero h1 span {
+      color: var(--yellow);
+    }
+    .hero-sub {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: rgba(255,255,255,0.8);
+      max-width: 640px;
+      margin: 0 auto 12px;
+      line-height: 1.6;
+    }
+    .hero-sub strong {
+      color: #fff;
+    }
+    .hero-sub .highlight {
+      color: var(--yellow);
+      font-weight: 600;
+    }
+    .hero-tagline {
+      font-size: 16px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 40px;
+    }
+
+    /* ── Form ── */
+    .form-wrap {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .form-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .form-row input {
+      flex: 1;
+      padding: 16px 20px;
+      border-radius: 12px;
+      border: 2px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      font-size: 16px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-row input::placeholder {
+      color: rgba(255,255,255,0.5);
+    }
+    .form-row input:focus {
+      border-color: rgba(255,255,255,0.4);
+    }
+    .form-row input.name-input {
+      flex: 0 0 35%;
+    }
+    .cta-btn {
+      width: 100%;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 12px;
+      background: var(--brand-dark);
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: inherit;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      animation: pulseGlow 2s ease-in-out infinite;
+    }
+    .cta-btn:hover {
+      background: #064030;
+      transform: translateY(-1px);
+    }
+    .cta-btn:active {
+      transform: translateY(0);
+    }
+    .form-note {
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+      margin-top: 12px;
+    }
+    .form-success {
+      text-align: center;
+      padding: 32px;
+      border: 2px solid rgba(11,71,58,0.3);
+      border-radius: 16px;
+      background: rgba(11,71,58,0.05);
+    }
+    .form-success .emoji { font-size: 40px; margin-bottom: 12px; }
+    .form-success h3 { font-size: 24px; font-weight: 700; color: var(--brand); margin-bottom: 8px; }
+    .form-success p { color: #666; }
+
+    /* ── Light form variant ── */
+    .form-light .form-row input {
+      border-color: #e5e5e5;
+      background: #fff;
+      color: #1a1a1a;
+    }
+    .form-light .form-row input::placeholder { color: #aaa; }
+    .form-light .form-row input:focus { border-color: var(--brand); }
+    .form-light .cta-btn {
+      background: var(--brand);
+    }
+    .form-light .cta-btn:hover { background: var(--brand-light); }
+    .form-light .form-note { color: #aaa; }
+
+    /* ── Social Proof Bar ── */
+    .proof-bar {
+      background: var(--warm-gray);
+      border-bottom: 1px solid #eee;
+      padding: 20px 24px;
+    }
+    .proof-bar-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      font-size: 14px;
+      color: #888;
+      font-weight: 500;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .proof-check {
+      color: var(--brand);
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .proof-divider {
+      width: 1px;
+      height: 16px;
+      background: #ccc;
+    }
+
+    /* ── Section base ── */
+    .section {
+      padding: 80px 24px;
+    }
+    .section-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .section-wide {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      color: #1a1a1a;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .section-subtitle {
+      font-size: 18px;
+      color: #666;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+
+    /* ── Pain Points ── */
+    .pain-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-align: left;
+    }
+    .pain-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #f0f0f0;
+      background: rgba(250,250,250,0.5);
+    }
+    .pain-x {
+      color: #f87171;
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .pain-item p { color: #555; }
+    .pain-answer {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--brand);
+      margin-top: 40px;
+    }
+
+    /* ── Benefits Grid ── */
+    .bg-warm { background: var(--warm-gray); }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+    }
+    .benefit-card {
+      background: #fff;
+      border: 1px solid #f0f0f0;
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .benefit-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+    .benefit-icon { font-size: 28px; margin-bottom: 16px; }
+    .benefit-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+    .benefit-card p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ── Roadmap ── */
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .roadmap-card {
+      border: 2px solid rgba(11,71,58,0.1);
+      background: rgba(11,71,58,0.02);
+      border-radius: 16px;
+      padding: 24px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .roadmap-card:hover {
+      border-color: rgba(11,71,58,0.3);
+      background: rgba(11,71,58,0.05);
+    }
+    .roadmap-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(11,71,58,0.5);
+      margin-bottom: 4px;
+    }
+    .roadmap-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brand);
+      margin-bottom: 8px;
+    }
+    .roadmap-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* ── Quote ── */
+    .quote-section {
+      background: var(--brand);
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .quote-section blockquote {
+      font-size: clamp(22px, 3.5vw, 32px);
+      font-weight: 500;
+      font-style: italic;
+      color: rgba(255,255,255,0.9);
+      max-width: 700px;
+      margin: 0 auto 24px;
+      line-height: 1.4;
+    }
+    .quote-section .quote-attr {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ── Final CTA ── */
+    .final-cta {
+      background: var(--warm-gray);
+      text-align: center;
+    }
+    .final-cta .form-wrap {
+      max-width: 480px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid #f0f0f0;
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .hero-inner { padding: 60px 20px 72px; }
+      .form-row { flex-direction: column; }
+      .form-row input.name-input { flex: 1; }
+      .proof-divider { display: none; }
+      .section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg-circle-1"></div>
+    <div class="hero-bg-circle-2"></div>
+    <div class="hero-inner">
+      <div class="badge fade-in">Free Challenge — Limited Spots</div>
+      <h1 class="fade-in-d1">The 30-Day Content<br><span>Challenge</span></h1>
+      <p class="hero-sub fade-in-d2">
+        The exact system to go from <strong>"I don't know what to post"</strong>
+        to creating content that
+        <span class="highlight">builds your brand, grows your audience, and lands paid deals</span>
+        — in just 30 days.
+      </p>
+      <p class="hero-tagline fade-in-d2">You don't need permission to start. You just need a plan.</p>
+      <div class="form-wrap fade-in-d3" id="hero-form">
+        <div class="form-row">
+          <input type="text" class="name-input" placeholder="First name" id="hero-name" />
+          <input type="email" placeholder="Your best email" id="hero-email" />
+        </div>
+        <button class="cta-btn" onclick="handleSubmit('hero')">Join the Free 30-Day Challenge →</button>
+        <p class="form-note">100% free. No spam. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="proof-bar">
+    <div class="proof-bar-inner">
+      <span class="proof-item"><span class="proof-check">✓</span> 500+ Creators Joined</span>
+      <span class="proof-divider"></span>
+      <span class="proof-item"><span class="proof-check">✓</span> 100% Free</span>
+      <span class="proof-divider"></span>
+      <span class="proof-item"><span class="proof-check">✓</span> Delivered to Your Inbox</span>
+      <span class="proof-divider"></span>
+      <span class="proof-item"><span class="proof-check">✓</span> Actionable Daily Prompts</span>
+    </div>
+  </section>
+
+  <!-- Pain Points -->
+  <section class="section" style="background:#fff;">
+    <div class="section-inner">
+      <h2 class="section-title">Sound familiar?</h2>
+      <div class="pain-list">
+        <div class="pain-item">
+          <span class="pain-x">✕</span>
+          <p>You know you should be posting content, but you never know what to say</p>
+        </div>
+        <div class="pain-item">
+          <span class="pain-x">✕</span>
+          <p>You start strong but lose motivation after a week</p>
+        </div>
+        <div class="pain-item">
+          <span class="pain-x">✕</span>
+          <p>You see other creators getting brand deals and wonder what they're doing differently</p>
+        </div>
+        <div class="pain-item">
+          <span class="pain-x">✕</span>
+          <p>You feel like you need a huge following before you can monetize</p>
+        </div>
+        <div class="pain-item">
+          <span class="pain-x">✕</span>
+          <p>You're overthinking every post instead of just hitting publish</p>
+        </div>
+      </div>
+      <p class="pain-answer">This challenge was built to fix all of that.</p>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section bg-warm">
+    <div class="section-wide">
+      <h2 class="section-title">What You'll Get</h2>
+      <p class="section-subtitle">Everything you need to build a content habit that actually sticks — and starts working for your business.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">📱</div>
+          <h3>Daily Content Prompts</h3>
+          <p>Never stare at a blank screen again. Get a specific, actionable prompt every single day for 30 days.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🎯</div>
+          <h3>Build a Real Content System</h3>
+          <p>Learn how to plan, create, and publish content consistently — without burning out.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🚀</div>
+          <h3>Grow Your Brand & Audience</h3>
+          <p>Attract followers, clients, and opportunities by showing up with valuable content daily.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💡</div>
+          <h3>Find Your Unique Voice</h3>
+          <p>Discover what makes your content stand out and build authority in your niche.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🤝</div>
+          <h3>Land Paid Brand Deals</h3>
+          <p>Position yourself as a creator brands want to work with — even if you're just starting out.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📈</div>
+          <h3>Track Your Progress</h3>
+          <p>Stay accountable with a structured challenge that builds momentum day after day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section class="section" style="background:#fff;">
+    <div class="section-wide">
+      <h2 class="section-title">Your 30-Day Roadmap</h2>
+      <p class="section-subtitle">A structured path from content beginner to confident creator.</p>
+      <div class="roadmap-grid">
+        <div class="roadmap-card">
+          <div class="roadmap-label">Day 1-5</div>
+          <h3>Foundation</h3>
+          <p>Define your niche, audience, and content pillars</p>
+        </div>
+        <div class="roadmap-card">
+          <div class="roadmap-label">Day 6-10</div>
+          <h3>Creation</h3>
+          <p>Master short-form and long-form content formats</p>
+        </div>
+        <div class="roadmap-card">
+          <div class="roadmap-label">Day 11-15</div>
+          <h3>Engagement</h3>
+          <p>Build community and grow your reach</p>
+        </div>
+        <div class="roadmap-card">
+          <div class="roadmap-label">Day 16-20</div>
+          <h3>Strategy</h3>
+          <p>Develop your content calendar and workflow</p>
+        </div>
+        <div class="roadmap-card">
+          <div class="roadmap-label">Day 21-25</div>
+          <h3>Monetization</h3>
+          <p>Learn to attract brands and partnerships</p>
+        </div>
+        <div class="roadmap-card">
+          <div class="roadmap-label">Day 26-30</div>
+          <h3>Scale</h3>
+          <p>Systematize your process for long-term growth</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="quote-section">
+    <blockquote>"The best time to start creating content was a year ago. The second best time is today."</blockquote>
+    <p class="quote-attr">Stop waiting. Start creating.</p>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section final-cta">
+    <div class="section-inner">
+      <h2 class="section-title">Ready to Start?</h2>
+      <p class="section-subtitle">Join the challenge today and start building content that works for you — not against you.</p>
+      <div class="form-wrap form-light" id="cta-form">
+        <div class="form-row">
+          <input type="text" class="name-input" placeholder="First name" id="cta-name" />
+          <input type="email" placeholder="Your best email" id="cta-email" />
+        </div>
+        <button class="cta-btn" onclick="handleSubmit('cta')">Join the Free 30-Day Challenge →</button>
+        <p class="form-note">100% free. No spam. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 GoLocal Group. All rights reserved.</p>
+  </footer>
+
+  <script>
+    async function handleSubmit(formId) {
+      const nameInput = document.getElementById(formId + '-name');
+      const emailInput = document.getElementById(formId + '-email');
+      const formWrap = document.getElementById(formId + '-form');
+      const btn = formWrap.querySelector('.cta-btn');
+
+      const email = emailInput.value.trim();
+      const firstName = nameInput.value.trim();
+
+      if (!email || !email.includes('@')) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      btn.textContent = 'Joining...';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, firstName }),
+        });
+
+        if (res.ok) {
+          formWrap.innerHTML = `
+            <div class="form-success">
+              <div class="emoji">🎉</div>
+              <h3>You're In!</h3>
+              <p>Check your inbox for Day 1 of the challenge. Let's build something amazing together.</p>
+            </div>
+          `;
+        } else {
+          btn.textContent = 'Join the Free 30-Day Challenge →';
+          btn.disabled = false;
+          alert('Something went wrong. Please try again.');
+        }
+      } catch (e) {
+        btn.textContent = 'Join the Free 30-Day Challenge →';
+        btn.disabled = false;
+        alert('Network error. Please try again.');
+      }
+    }
+  </script>
+
+</body>
+</html>
