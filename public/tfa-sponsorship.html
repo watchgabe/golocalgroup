@@ -5,28 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Become a Sponsor | Texas Ford Aquatics</title>
   <meta name="description" content="Partner with Texas Ford Aquatics and connect your business with one of the most engaged family communities in North Texas." />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { background: #ffffff; color: #1A1A1A; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    body { background: #ffffff; color: #1A1A1A; font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
     ul { list-style: none; }
-    .tfa-page h1, .tfa-page h2, .tfa-page h3, .tfa-page h4 { font-family: 'Oswald', sans-serif; }
+    .tfa-page h1, .tfa-page h2, .tfa-page h3, .tfa-page h4 { font-family: 'Bebas Neue', sans-serif; }
 
     /* ── Scrollbar hide ── */
     .tfa-gold-scroll { scrollbar-width: none; -ms-overflow-style: none; }
     .tfa-gold-scroll::-webkit-scrollbar { display: none; }
-
-    /* ── Nav CTA: never wrap ── */
-    .tfa-nav-cta-btn { white-space: nowrap; }
 
     /* ── Tablet ≤900px ── */
     @media (max-width: 900px) {
       .tfa-why-grid, .tfa-event-grid { grid-template-columns: repeat(2, 1fr) !important; }
       .tfa-why-grid > div, .tfa-event-grid > div { border-right: none !important; }
       .tfa-why-grid > div:nth-child(odd), .tfa-event-grid > div:nth-child(odd) { border-right: 1px solid #E0E3E8 !important; }
-      .tfa-footer-tagline { grid-column: span 1 !important; }
       .tfa-gold-arrows { display: none !important; }
       .tfa-gold-scroll { flex-direction: column !important; overflow-x: visible !important; scroll-snap-type: none !important; padding-bottom: 0 !important; }
       .tfa-gold-card { min-width: 0 !important; max-width: 100% !important; width: 100%; margin-right: 0 !important; margin-bottom: 2px !important; }
@@ -44,8 +40,6 @@
       .tfa-why-grid > div, .tfa-event-grid > div { border-right: none !important; }
       .tfa-stat-grid { grid-template-columns: 1fr !important; }
       .tfa-stat-grid > div { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1); }
-      .tfa-nav-main-site { display: none !important; }
-      .tfa-nav-cta-btn { font-size: 12px !important; padding: 10px 14px !important; letter-spacing: 0.5px !important; }
     }
   </style>
 </head>
@@ -53,20 +47,10 @@
 <main class="tfa-page" style="background:#ffffff; font-family:'Open Sans',sans-serif; color:#1A1A1A; overflow-x:hidden;">
 
   <!-- ═══ NAV ═══ -->
-  <nav style="position:fixed; top:0; left:0; right:0; z-index:100; background:#020b27; border-bottom:1px solid rgba(255,255,255,0.08); padding:0 clamp(16px,4vw,60px); height:70px; display:flex; align-items:center; justify-content:space-between;">
-    <!-- Upload tfa-logo.png to WordPress Media Library and replace src below -->
-    <img src="tfa-logo.png" alt="Texas Ford Aquatics" style="height:52px; width:auto; object-fit:contain; display:block;" />
-    <div style="display:flex; gap:16px; align-items:center;">
-      <a href="https://txfordaquatics.com" target="_blank" rel="noopener noreferrer" class="tfa-nav-main-site" style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.6); letter-spacing:0.5px;">Main Site</a>
-      <a href="#apply" class="tfa-nav-cta-btn" style="display:inline-block; background:#bd2533; border:2px solid #bd2533; color:#ffffff; font-family:'Oswald',sans-serif; font-weight:600; font-size:15px; letter-spacing:1.5px; text-transform:uppercase; padding:13px 32px;">Become a Sponsor</a>
-    </div>
-  </nav>
-
-
   <!-- ═══ HERO ═══ -->
-  <section style="position:relative; min-height:90vh; display:flex; align-items:flex-end; padding-top:70px; overflow:hidden;">
+  <section style="position:relative; min-height:90vh; display:flex; align-items:flex-end; padding-top:0; overflow:hidden;">
     <!-- Upload tfa-hero.jpg to WordPress Media Library and replace src below -->
-    <div style="position:absolute; inset:0; background-image:url('tfa-hero.jpg'); background-size:cover; background-position:center 25%;"></div>
+    <div style="position:absolute; inset:0; background-image:url('https://txfordaquatics.com/wp-content/uploads/2025/01/IMG_6831.jpg'); background-size:cover; background-position:center 25%;"></div>
     <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(2,11,39,0.96) 0%, rgba(2,11,39,0.7) 40%, rgba(2,11,39,0.3) 80%, transparent 100%);"></div>
     <div style="position:relative; z-index:2; width:100%; max-width:1300px; margin:0 auto; padding:0 clamp(20px,5vw,80px) 80px;">
       <h1 style="font-size:clamp(40px,6.5vw,90px); font-weight:900; line-height:1.0; letter-spacing:0.01em; text-transform:uppercase; color:#ffffff; margin-bottom:20px;">
@@ -77,8 +61,8 @@
         Partner with Texas Ford Aquatics and connect your business with one of the most engaged family communities in North Texas.
       </p>
       <div style="display:flex; gap:16px; flex-wrap:wrap;">
-        <a href="#apply" style="display:inline-block; background:#bd2533; border:2px solid #bd2533; color:#ffffff; font-family:'Oswald',sans-serif; font-weight:600; font-size:15px; letter-spacing:1.5px; text-transform:uppercase; padding:13px 32px;">Become a Sponsor</a>
-        <a href="#tiers" style="display:inline-block; border:2px solid rgba(255,255,255,0.5); color:#ffffff; font-weight:700; font-size:14px; letter-spacing:1.5px; text-transform:uppercase; padding:14px 32px;">View Packages</a>
+        <a href="https://453f8jrwcv1.typeform.com/to/selBfR8Y" style="display:inline-block; background:#bd2533; border:2px solid #bd2533; color:#ffffff; font-family:'Bebas Neue',sans-serif; font-weight:600; font-size:15px; letter-spacing:1.5px; text-transform:uppercase; padding:13px 32px;">Become a Sponsor</a>
+        <a href="#tiers" style="display:inline-block; border:2px solid rgba(255,255,255,0.5); color:#ffffff; font-family:'Bebas Neue',sans-serif; font-weight:600; font-size:15px; letter-spacing:1.5px; text-transform:uppercase; padding:13px 32px;">View Packages</a>
       </div>
     </div>
   </section>
@@ -88,15 +72,15 @@
   <div style="background:#020b27; padding:0 clamp(20px,5vw,80px);">
     <div class="tfa-stat-grid" style="max-width:1300px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); border-left:4px solid #bd2533;">
       <div style="padding:28px 32px; border-right:1px solid rgba(255,255,255,0.1); text-align:center;">
-        <div style="font-family:'Oswald',sans-serif; font-size:clamp(28px,3.5vw,44px); font-weight:900; color:#ffffff; line-height:1;">1,000+</div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:clamp(28px,3.5vw,44px); font-weight:900; color:#ffffff; line-height:1;">1,000+</div>
         <div style="font-size:12px; color:rgba(255,255,255,0.5); font-weight:600; letter-spacing:2px; margin-top:6px; text-transform:uppercase;">Active Families</div>
       </div>
       <div style="padding:28px 32px; border-right:1px solid rgba(255,255,255,0.1); text-align:center;">
-        <div style="font-family:'Oswald',sans-serif; font-size:clamp(28px,3.5vw,44px); font-weight:900; color:#ffffff; line-height:1;">3–10×</div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:clamp(28px,3.5vw,44px); font-weight:900; color:#ffffff; line-height:1;">3–10×</div>
         <div style="font-size:12px; color:rgba(255,255,255,0.5); font-weight:600; letter-spacing:2px; margin-top:6px; text-transform:uppercase;">Weekly Facility Visits</div>
       </div>
       <div style="padding:28px 32px; text-align:center;">
-        <div style="font-family:'Oswald',sans-serif; font-size:clamp(28px,3.5vw,44px); font-weight:900; color:#ffffff; line-height:1;">50+</div>
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:clamp(28px,3.5vw,44px); font-weight:900; color:#ffffff; line-height:1;">50+</div>
         <div style="font-size:12px; color:rgba(255,255,255,0.5); font-weight:600; letter-spacing:2px; margin-top:6px; text-transform:uppercase;">Years of Excellence</div>
       </div>
     </div>
@@ -139,12 +123,11 @@
 
   <!-- ═══ CLUB EXCELLENCE ═══ -->
   <section style="position:relative; overflow:hidden; padding:100px clamp(20px,5vw,80px); min-height:420px; display:flex; align-items:center;">
-    <!-- Upload tfa-excellence-badge.png to WordPress Media Library and replace src below -->
-    <div style="position:absolute; inset:0; background-image:url('tfa-excellence-badge.png'); background-size:cover; background-position:center; filter:brightness(0.2);"></div>
+    <div style="position:absolute; inset:0; background-image:url('https://txfordaquatics.com/wp-content/uploads/2025/01/TFA-61.jpg'); background-size:cover; background-position:center; filter:brightness(0.2);"></div>
     <div style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(2,11,39,0.95) 0%, rgba(10,26,58,0.9) 100%);"></div>
     <div style="position:relative; z-index:2; max-width:1300px; margin:0 auto; width:100%; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:60px; align-items:center;">
       <div>
-        <img src="tfa-excellence-badge.png" alt="USA Swimming Club Excellence Gold Award" style="width:140px; height:140px; object-fit:contain; margin-bottom:24px;" />
+        <img src="https://txfordaquatics.com/wp-content/uploads/2025/01/TFA-48.jpg" alt="USA Swimming Club Excellence Gold Award" style="width:140px; height:140px; object-fit:cover; border-radius:50%; margin-bottom:24px;" />
         <h2 style="font-size:clamp(32px,5vw,64px); font-weight:900; text-transform:uppercase; line-height:1.0; letter-spacing:0.03em; color:#ffffff;">Club Excellence</h2>
         <div style="width:60px; height:4px; background:#bd2533; margin:20px 0 24px;"></div>
         <p style="font-size:17px; color:rgba(255,255,255,0.7); line-height:1.8; max-width:480px;">Texas Ford Aquatics has earned the USA Swimming Club Excellence Gold Award — placing our program among the nation's most elite competitive swim clubs.</p>
@@ -173,7 +156,7 @@
         <div style="background:#ffffff;">
           <div style="background:#020b27; padding:32px 40px; border-top:5px solid #8FA8BF;">
             <div style="font-size:11px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#8FA8BF; margin-bottom:12px;">Silver Sponsor</div>
-            <div style="font-family:'Oswald',sans-serif; font-size:clamp(40px,5vw,60px); font-weight:900; color:#ffffff; line-height:1;">$2,500<span style="font-size:16px; font-weight:500; color:rgba(255,255,255,0.4);"> / year</span></div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,5vw,60px); font-weight:900; color:#ffffff; line-height:1;">$2,500<span style="font-size:16px; font-weight:500; color:rgba(255,255,255,0.4);"> / year</span></div>
             <p style="font-size:14px; color:rgba(255,255,255,0.55); margin-top:12px;">Consistent visibility and strong community alignment.</p>
           </div>
           <div style="padding:36px 40px;">
@@ -187,7 +170,7 @@
               <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:#444444; line-height:1.6; padding:8px 0; border-bottom:1px solid #E0E3E8;"><span style="color:#bd2533; font-weight:900; font-size:14px; margin-top:2px; flex-shrink:0;">✓</span>Invitation to the TFA Team Awards event</li>
             </ul>
             <div style="margin-top:32px;">
-              <a href="#apply" style="display:inline-block; background:transparent; border:2px solid #bd2533; color:#bd2533; font-family:'Oswald',sans-serif; font-weight:600; font-size:15px; letter-spacing:1.5px; text-transform:uppercase; padding:13px 32px;">Apply for Silver →</a>
+              <a href="https://453f8jrwcv1.typeform.com/to/selBfR8Y" style="display:inline-block; background:transparent; border:2px solid #bd2533; color:#bd2533; font-family:'Bebas Neue',sans-serif; font-weight:600; font-size:15px; letter-spacing:1.5px; text-transform:uppercase; padding:13px 32px;">Apply for Silver →</a>
             </div>
           </div>
         </div>
@@ -197,7 +180,7 @@
           <div style="background:#020b27; padding:32px 40px; border-top:5px solid #C9A035;">
             <div style="position:absolute; top:12px; right:20px; background:#C9A035; color:#020b27; font-weight:800; font-size:10px; letter-spacing:2px; text-transform:uppercase; padding:5px 14px;">Most Popular</div>
             <div style="font-size:11px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#E4BA55; margin-bottom:12px;">Gold Sponsor</div>
-            <div style="font-family:'Oswald',sans-serif; font-size:clamp(40px,5vw,60px); font-weight:900; color:#ffffff; line-height:1;">$5,000<span style="font-size:16px; font-weight:500; color:rgba(255,255,255,0.4);"> / year</span></div>
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,5vw,60px); font-weight:900; color:#ffffff; line-height:1;">$5,000<span style="font-size:16px; font-weight:500; color:rgba(255,255,255,0.4);"> / year</span></div>
             <p style="font-size:14px; color:rgba(255,255,255,0.55); margin-top:12px;">Deeper engagement, premium placement, and content opportunities.</p>
           </div>
           <div style="padding:36px 40px;">
@@ -212,7 +195,7 @@
               <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:#444444; line-height:1.6; padding:8px 0; border-bottom:1px solid #E0E3E8;"><span style="color:#C9A035; font-weight:900; font-size:14px; margin-top:2px; flex-shrink:0;">✓</span>Logo in the annual TFA highlight video</li>
             </ul>
             <div style="margin-top:32px;">
-              <a href="#apply" style="display:inline-block; background:#bd2533; border:2px solid #bd2533; color:#ffffff; font-family:'Oswald',sans-serif; font-weight:600; font-size:15px; letter-spacing:1.5px; text-transform:uppercase; padding:13px 32px;">Apply for Gold →</a>
+              <a href="https://453f8jrwcv1.typeform.com/to/selBfR8Y" style="display:inline-block; background:#bd2533; border:2px solid #bd2533; color:#ffffff; font-family:'Bebas Neue',sans-serif; font-weight:600; font-size:15px; letter-spacing:1.5px; text-transform:uppercase; padding:13px 32px;">Apply for Gold →</a>
             </div>
           </div>
         </div>
@@ -333,43 +316,13 @@
       <p style="font-size:17px; color:rgba(255,255,255,0.65); line-height:1.8; max-width:540px; margin:0 auto 16px;">Support elite athletes while placing your brand in front of one of the most engaged family communities in North Texas.</p>
       <p style="font-size:12px; color:#bd2533; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:48px;">Sponsorship opportunities are limited to ensure strong visibility for each partner.</p>
       <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-        <!-- REPLACE TYPEFORM ID BELOW -->
-        <a href="https://form.typeform.com/to/REPLACE_WITH_TYPEFORM_ID" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#bd2533; border:2px solid #bd2533; color:#ffffff; font-family:'Oswald',sans-serif; font-weight:600; font-size:15px; letter-spacing:1.5px; text-transform:uppercase; padding:13px 32px;">Apply to Become a Sponsor</a>
-        <a href="https://txfordaquatics.com/contact" target="_blank" rel="noopener noreferrer" style="display:inline-block; border:2px solid rgba(255,255,255,0.35); color:#ffffff; font-weight:700; font-size:14px; letter-spacing:1.5px; text-transform:uppercase; padding:14px 32px;">Schedule a Call</a>
+        <a href="https://453f8jrwcv1.typeform.com/to/selBfR8Y" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#bd2533; border:2px solid #bd2533; color:#ffffff; font-family:'Bebas Neue',sans-serif; font-weight:600; font-size:15px; letter-spacing:1.5px; text-transform:uppercase; padding:13px 32px;">Apply to Become a Sponsor</a>
+        <a href="mailto:coachjones@texasfordaquatics.com" style="display:inline-block; border:2px solid rgba(255,255,255,0.35); color:#ffffff; font-family:'Bebas Neue',sans-serif; font-weight:600; font-size:15px; letter-spacing:1.5px; text-transform:uppercase; padding:13px 32px;">Schedule a Call</a>
       </div>
     </div>
   </section>
 
 
-  <!-- ═══ FOOTER ═══ -->
-  <footer style="background:#0D0D0D; padding:70px clamp(20px,5vw,80px) 40px;">
-    <div style="max-width:1300px; margin:0 auto;">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:40px; margin-bottom:60px; align-items:start;">
-        <div class="tfa-footer-tagline" style="grid-column:span 2;">
-          <h3 style="font-family:'Oswald',sans-serif; font-size:clamp(26px,4vw,52px); font-weight:900; text-transform:uppercase; line-height:1.05; letter-spacing:0.02em; color:#ffffff; margin-bottom:28px;">Inspiring the Next<br />Generation of Greatness</h3>
-          <a href="#apply" style="display:inline-block; background:#bd2533; border:2px solid #bd2533; color:#ffffff; font-family:'Oswald',sans-serif; font-weight:600; font-size:15px; letter-spacing:1.5px; text-transform:uppercase; padding:13px 32px;">Contact Us</a>
-        </div>
-        <div>
-          <p style="font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:16px;">Sponsorship</p>
-          <a href="#tiers" style="display:block; font-size:14px; color:rgba(255,255,255,0.6); margin-bottom:10px;">Silver Package</a>
-          <a href="#tiers" style="display:block; font-size:14px; color:rgba(255,255,255,0.6); margin-bottom:10px;">Gold Package</a>
-          <a href="#tiers" style="display:block; font-size:14px; color:rgba(255,255,255,0.6); margin-bottom:10px;">Event Activation</a>
-          <a href="#apply" style="display:block; font-size:14px; color:rgba(255,255,255,0.6); margin-bottom:10px;">Apply Now</a>
-        </div>
-        <div>
-          <p style="font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:16px;">Texas Ford Aquatics</p>
-          <a href="https://txfordaquatics.com" target="_blank" rel="noopener noreferrer" style="display:block; font-size:14px; color:rgba(255,255,255,0.6); margin-bottom:10px;">Main Website</a>
-          <a href="https://txfordaquatics.com" target="_blank" rel="noopener noreferrer" style="display:block; font-size:14px; color:rgba(255,255,255,0.6); margin-bottom:10px;">Our Mission</a>
-          <a href="https://txfordaquatics.com" target="_blank" rel="noopener noreferrer" style="display:block; font-size:14px; color:rgba(255,255,255,0.6); margin-bottom:10px;">Swim Programs</a>
-          <a href="https://txfordaquatics.com/contact" target="_blank" rel="noopener noreferrer" style="display:block; font-size:14px; color:rgba(255,255,255,0.6); margin-bottom:10px;">Contact</a>
-        </div>
-      </div>
-      <div style="border-top:1px solid rgba(255,255,255,0.08); padding-top:28px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; align-items:center;">
-        <img src="tfa-logo.png" alt="Texas Ford Aquatics" style="height:30px; width:auto; object-fit:contain; opacity:0.4;" />
-        <p style="font-size:12px; color:rgba(255,255,255,0.25); letter-spacing:0.5px;">© 2026 Texas Ford Aquatics. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
 
 </main>
 </body>
