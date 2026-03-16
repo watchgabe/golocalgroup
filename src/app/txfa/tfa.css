@@ -1,0 +1,83 @@
+/* ── TFA Sponsorship Page — Responsive Layout ── */
+
+/* Tablet: 4-col → 2-col grids */
+@media (max-width: 900px) {
+  .tfa-why-grid,
+  .tfa-event-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .tfa-why-grid > div,
+  .tfa-event-grid > div {
+    border-right: none !important;
+  }
+  .tfa-why-grid > div:nth-child(odd),
+  .tfa-event-grid > div:nth-child(odd) {
+    border-right: 1px solid #E0E3E8 !important;
+  }
+  .tfa-footer-tagline {
+    grid-column: span 1 !important;
+  }
+  /* Gold exclusive: hide arrows, stack cards vertically */
+  .tfa-gold-arrows {
+    display: none !important;
+  }
+  .tfa-gold-scroll {
+    flex-direction: column !important;
+    overflow-x: visible !important;
+    scroll-snap-type: none !important;
+    padding-bottom: 0 !important;
+  }
+  .tfa-gold-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 2px !important;
+    scroll-snap-align: none !important;
+  }
+}
+
+/* Mobile: 2-col → 1-col, stat bar stacks */
+@media (max-width: 560px) {
+  .tfa-why-grid,
+  .tfa-event-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .tfa-why-grid > div,
+  .tfa-event-grid > div {
+    border-right: none !important;
+  }
+  .tfa-stat-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .tfa-stat-grid > div {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  /* Nav: shrink CTA button, hide "Main Site" */
+  .tfa-nav-main-site {
+    display: none !important;
+  }
+  .tfa-nav-cta-btn {
+    font-size: 12px !important;
+    padding: 10px 14px !important;
+    letter-spacing: 0.5px !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Always prevent text wrapping on nav CTA */
+.tfa-nav-cta-btn {
+  white-space: nowrap;
+}
+
+/* Comparison table: wider feature column on mobile */
+@media (max-width: 768px) {
+  .tfa-compare-grid {
+    grid-template-columns: 5fr 3fr 3fr !important;
+  }
+  .tfa-compare-grid > div {
+    padding: 10px 12px !important;
+    font-size: 12px !important;
+  }
+}
