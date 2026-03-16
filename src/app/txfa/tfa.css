@@ -70,3 +70,14 @@
 .tfa-nav-cta-btn {
   white-space: nowrap;
 }
+
+/* Comparison table: wider feature column on mobile */
+@media (max-width: 768px) {
+  .tfa-compare-grid {
+    grid-template-columns: 5fr 3fr 3fr !important;
+  }
+  .tfa-compare-grid > div {
+    padding: 10px 12px !important;
+    font-size: 12px !important;
+  }
+}

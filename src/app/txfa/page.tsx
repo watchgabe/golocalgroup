@@ -609,7 +609,7 @@ export default function TFASponsorshipPage() {
 
           <div style={{ background: T.white, border: `1px solid ${T.border}` }}>
             {/* Header */}
-            <div style={{
+            <div className="tfa-compare-grid" style={{
               display: "grid", gridTemplateColumns: "1fr 1fr 1fr",
               background: T.navy, color: T.white,
             }}>
@@ -632,7 +632,7 @@ export default function TFASponsorshipPage() {
               { feature: "VIP Meet Access", silver: false, gold: true },
               { feature: "Brand Content Sessions", silver: false, gold: true },
             ].map((row, i) => (
-              <div key={row.feature} style={{
+              <div key={row.feature} className="tfa-compare-grid" style={{
                 display: "grid", gridTemplateColumns: "1fr 1fr 1fr",
                 borderBottom: `1px solid ${T.border}`,
                 background: i % 2 === 0 ? T.white : T.offWhite,
