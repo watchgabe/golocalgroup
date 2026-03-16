@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useRef } from "react";
+import "./tfa.css";
 
 /* ── Design Tokens — TFA Brand (exact from txfordaquatics.com) ── */
 const T = {
@@ -193,10 +194,18 @@ export default function TFASponsorshipPage() {
         />
         <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
           <a href="https://txfordaquatics.com" target="_blank" rel="noopener noreferrer"
+            className="tfa-nav-main-site"
             style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.6)", textDecoration: "none", letterSpacing: 0.5 }}>
             Main Site
           </a>
-          <RedButton href="#apply">Become a Sponsor</RedButton>
+          <a href="#apply" className="tfa-nav-cta-btn" style={{
+            display: "inline-block",
+            background: T.red, border: `2px solid ${T.red}`,
+            color: T.white,
+            fontFamily: HEADING, fontWeight: 600, fontSize: 15,
+            letterSpacing: 1.5, textTransform: "uppercase",
+            padding: "13px 32px", textDecoration: "none",
+          }}>Become a Sponsor</a>
         </div>
       </nav>
 
@@ -269,7 +278,7 @@ export default function TFASponsorshipPage() {
         background: T.navy,
         padding: "0 clamp(20px, 5vw, 80px)",
       }}>
-        <div style={{
+        <div className="tfa-stat-grid" style={{
           maxWidth: 1300, margin: "0 auto",
           display: "grid", gridTemplateColumns: "repeat(3, 1fr)",
           borderLeft: `4px solid ${T.red}`,
@@ -314,7 +323,7 @@ export default function TFASponsorshipPage() {
             </p>
           </div>
 
-          <div style={{
+          <div className="tfa-why-grid" style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
             gap: 0,
@@ -543,7 +552,7 @@ export default function TFASponsorshipPage() {
                 letterSpacing: "0.02em", color: T.text,
               }}>Exclusive Gold Experiences</h2>
             </div>
-            <div style={{ display: "flex", gap: 8 }}>
+            <div className="tfa-gold-arrows" style={{ display: "flex", gap: 8 }}>
               {["‹", "›"].map((arrow, i) => (
                 <button key={arrow} onClick={() => scroll(i === 0 ? -1 : 1)} style={{
                   width: 44, height: 44,
@@ -556,7 +565,7 @@ export default function TFASponsorshipPage() {
           </div>
         </div>
 
-        <div ref={scrollRef} style={{
+        <div ref={scrollRef} className="tfa-gold-scroll" style={{
           display: "flex", gap: 0,
           overflowX: "auto", scrollSnapType: "x mandatory",
           padding: "0 clamp(20px, 5vw, 80px) 8px",
@@ -568,7 +577,7 @@ export default function TFASponsorshipPage() {
             { title: "Friends & Family Night", body: "An invitation-only experience to host guests and see elite swim training up close.", icon: "star" },
             { title: "Featured Sponsor Spotlight", body: "A long-form newsletter feature that tells your business story to our entire community.", icon: "file-text" },
           ].map((card) => (
-            <div key={card.title} style={{
+            <div key={card.title} className="tfa-gold-card" style={{
               minWidth: 340, maxWidth: 360, flexShrink: 0, scrollSnapAlign: "start",
               background: T.offWhite, border: `1px solid ${T.border}`,
               borderTop: `4px solid ${T.gold}`,
@@ -663,7 +672,7 @@ export default function TFASponsorshipPage() {
             </p>
           </div>
 
-          <div style={{
+          <div className="tfa-event-grid" style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
             gap: 0,
@@ -741,7 +750,7 @@ export default function TFASponsorshipPage() {
             alignItems: "start",
           }}>
             {/* Tagline + CTA */}
-            <div style={{ gridColumn: "span 2" }}>
+            <div className="tfa-footer-tagline" style={{ gridColumn: "span 2" }}>
               <h3 style={{
                 fontSize: "clamp(26px, 4vw, 52px)", fontWeight: 900,
                 textTransform: "uppercase" as const, lineHeight: 1.05,
